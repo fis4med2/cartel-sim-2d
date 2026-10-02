@@ -1,0 +1,37 @@
+#pragma once
+struct NPC {
+  float x = 0, y = 0, wx = 0, wy = 0;
+  float cx = 0, cy = 0;
+  float vx = 0, vy = 0, ang = 0, anim = 0, hit = 0;
+  float qx[8], qy[8];
+  int qn = 0, qi = 0;
+  float hp = 100;
+  int team = 0;
+  int state = 0;
+  int wpn = 0;
+  int cls = 0;
+  int carId = -1;
+  int burst = 0;
+  float cool = 0;
+  float ret = 0;
+  float burstT = 0;
+  float alert = 0;
+  float stuck = 0;
+  float call = 0;
+  float muz = 0;
+  float chat = 0;
+  float prt = 0;
+  float fleeLock = 0;
+  float ex = 0, ey = 0, et = -99;
+  int role = 0;
+  int wallSide = 1;
+  int strafeDir = 1;
+  bool alive = true;
+};
+enum { NST_PATROL, NST_CHASE, NST_ATTACK, NST_FLEE, NST_COVER, NST_SUPPORT, NST_CAPTURE, NST_HEAL, NST_SEEK_CAR, NST_DRIVE, NST_CHAT };
+enum { CLS_LIGHT, CLS_HEAVY, CLS_SNIPER, CLS_MEDIC };
+enum { ROLE_GUARD, ROLE_RAIDER };
+float clsMaxHp(int c);
+float clsSpeed(int c, int combat);
+float clsSize(int c);
+void setRole(NPC& n);

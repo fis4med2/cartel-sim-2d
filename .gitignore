@@ -1,0 +1,11 @@
+build/
+backup.dat
+*.o
+*.obj
+*.exe
+*.out
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
